@@ -39,12 +39,10 @@ const Login = (props) => {
 
   useEffect(() => {
     const inputTimer = setTimeout(() => {
-      console.log('mano')
       setFormIsValid(emailIsValid && passwordIsValid)
     }, 500)
 
     return () => {
-      console.log('truta')
       clearTimeout(inputTimer)
     }
   }, [emailIsValid, passwordIsValid])
